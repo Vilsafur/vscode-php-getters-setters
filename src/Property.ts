@@ -152,7 +152,7 @@ export default class Property {
         this.type = type;
 
         if (this.isValidTypeHint(type)) {
-            this.typeHint = type;
+            this.typeHint = (-1 === type.indexOf('[]')) ? type : 'array';
         }
     }
 }
